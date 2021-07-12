@@ -1,0 +1,283 @@
+/* -------  Fonts -------- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+
+
+/* ------------------------
+    Utility Styles
+--------------------- */
+body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background-color: #F3F1FF;
+}
+
+#main-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    background-color: #ffffff;
+    height: 679px;
+    width: 870px;
+    padding: 30px;
+    margin-top: 21px;
+    border-radius: 5px;
+}
+.container:nth-child(2) {
+   height: 362px; 
+}
+
+hr {
+    border: 1px solid #D1D1D1;
+    margin-bottom: 27px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ------------------------
+    Header area styles
+--------------------- */
+ #header-container {
+    background-color: #562eff;
+    padding: 14px 0;
+    margin-bottom: 12px;
+  }
+  
+  .navbar-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    margin-left: 7px;
+  }
+  .logo img {
+      width: 40px;
+  }
+  .logo h2 {
+    color: #ffffff;
+    font-size: 24px;
+    margin-left: 16px;
+    font-weight: 500;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .nav-item {
+    list-style: none;
+    margin: 0px 15px;
+  }
+  
+  .nav-link {
+    color: #ffffff;
+  }
+  
+  .profile-part {
+    margin-left: 18px;
+  }
+  
+  .user img {
+    width: 51px;
+    margin-right: 12px;
+  }
+
+
+
+
+
+/* ------------------------
+    top players style
+--------------------- */
+.top-players {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #562EFF;
+    margin-top: 3px;
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 30px;
+}
+
+.player {
+    display: flex;
+    align-items: center;
+}
+
+.player img {
+    height: 56px;
+    width: 56px;
+}
+
+.player .player-name {
+    margin-left: 16px;
+    font-size: 18px;
+}
+
+
+
+
+
+/* ------------------------
+    top blogs style
+--------------------- */
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 26px;
+}
+.blog {
+    display: flex;
+    align-items: center;
+}
+.thumbnail img {
+    width: 177px;
+    height: 117px;
+}
+.blog-info {
+    margin-left: 16px;
+}
+.blog-title {
+    font-size: 20px;
+}
+.blog-author {
+    color: #9F9F9F;
+    font-size: 16px;
+}
+.blog-author a {
+    text-decoration: none;
+    color: #562EFF;
+    font-size: 16px;
+}
+
+
+
+
+/* ------------------------
+    Latest Courses Style
+--------------------- */
+.courses {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 24px;
+}
+.course {
+    padding: 10px;
+    border-radius: 17px;
+    box-shadow: 0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05);
+}
+.course .course-banner img {
+    width: 224px;
+    height: 104px;
+}
+.course-title {
+    font-family: 'Roboto', sans-serif;
+    color: #1E1E1E;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+.course-author {
+    margin-top: 0px;
+    color: #ED6B4F;
+}
+.course-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.fa-star, .course-info span {
+    font-size: 12px;
+}
+.fa-star.filled {
+    color: #FFC014;
+}
+.fa-star.empty {
+    color: #AEAEAE;
+}
+.course-info span {
+    color: #A2A2A2;
+    margin-left: 7px;
+}
+.course-duration {
+    width: 95px;
+    height: 30px;
+    padding: 2px;
+    background-color: #FFE4E8;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: #FF4A60;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+
+/* ------------------------
+    Media queries for responsivness
+--------------------- */
+
+/* Mobile Devices */
+@media only screen and (max-width:688px) {
+    .navbar-nav {
+        display: none;
+    }
+    .user img {
+        margin-right: 50px;
+    }
+    .container{
+        width: 100%;
+        min-height: auto;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+        margin-right: 100px;
+    }
+    .player, .blog{
+        flex-direction: column;
+    }
+}
+
+/* tablet devices */
+@media only screen and (min-width: 688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .navbar-nav {
+        display: none;
+    }
+    .user img {
+        margin-right: 100px;
+    }
+    .players, .courses{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0px 30px;
+    }
+    .blogs{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
