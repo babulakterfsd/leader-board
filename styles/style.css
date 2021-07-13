@@ -356,7 +356,7 @@ a {
         width: 100%;
     }
     .container:nth-child(2) {
-        min-height: 950px;
+        min-height: 1000px;
     }
     #header-container {
         width: 100vw;
@@ -385,7 +385,7 @@ a {
         grid-gap: 15px 0px;
     }
     .course {
-        width: 50%;
+        width: 70%;
         margin-left: 70px;
         margin-bottom: 15px;
         padding: 10px 30px;
