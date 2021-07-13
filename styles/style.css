@@ -241,43 +241,156 @@ a {
     Media queries for responsivness
 --------------------- */
 
-/* Mobile Devices */
-@media only screen and (max-width:688px) {
-    .navbar-nav {
-        display: none;
+/* XL-Extra Large Device Container:1140px (Large Desktop) */
+@media (min-width: 1200px) {
+    /* no special changes */
+}
+
+/* LG-Large Device Container:960px (Desktop) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        width: 100vw;
     }
-    .user img {
-        margin-right: 50px;
+    #header-container {
+        width: 100vw;
     }
-    .container{
-        width: 100%;
-        min-height: auto;
+    .profile-part {
+        margin-right: 15px;
     }
-    .players, .blogs, .courses{
-        grid-template-columns: repeat(1, 1fr);
-        margin-right: 100px;
+    .section-title {
+        margin-left: 10px;
     }
-    .player, .blog{
-        flex-direction: column;
+    .top-players, .blogs, .courses {
+        padding: 0px 10px;
     }
 }
 
-/* tablet devices */
-@media only screen and (min-width: 688px) and (max-width:992px) {
-    .container{
+/* MD-Medium Device Container:720px (Tablet) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        height: auto;
+        width: 100vw;
+    }
+    .container:nth-child(2) {
+        min-height: 900px;
+    }
+    #header-container {
+        width: 100vw;
+    }
+    .section-title {
+        margin-left: 70px;
+    }
+    .players {
+        grid-template-columns: repeat(2, 1fr);
+        margin-left: 100px;
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 150px;
+    }
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px 0px;
+    }
+    .course {
+        width: 70%;
+        margin-left: 140px;
+        margin-bottom: 15px;
+        padding: 10px 30px;
+    }
+    .course-duration {
+        justify-content: center;
+    }
+}
+ 
+/* SM-Small Device Container:540px (Landscape Phone) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        height: auto;
         width: 100%;
+    }
+    .container:nth-child(2) {
+        min-height: 950px;
+    }
+    #header-container {
+        width: 100vw;
+    }
+    .section-title {
+        margin-left: 30px;
+    }
+    .players {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 30px;
+    }
+    .player {
+        margin-left: 120px;
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+        margin-left: 100px;
+    }
+    .blog {
+        padding: 20px;
+    }
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px 0px;
+    }
+    .course {
+        width: 50%;
+        margin-left: 70px;
+        margin-bottom: 15px;
+        padding: 10px 30px;
+    }
+    .course-duration {
+        justify-content: center;
+    }
+}
+
+/* XS-Extra Small Device (Portrait Phone) */
+@media (max-width: 575.98px) {
+    .container {
+        height: auto;
+        width: 100%;
+    }
+    .container:nth-child(2) {
+        min-height: 950px;
+    }
+    #header-container {
+        width: 100vw;
     }
     .navbar-nav {
         display: none;
     }
-    .user img {
-        margin-right: 100px;
+    .section-title {
+        margin-left: 30px;
     }
-    .players, .courses{
-        grid-template-columns: repeat(2, 1fr);
-        padding: 0px 30px;
-    }
-    .blogs{
+    .players {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .player {
+        margin-left: 100px;
+    }
+    .blogs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog {
+        padding: 20px;
+    }
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 15px 0px;
+    }
+    .course {
+        width: 50%;
+        margin-left: 70px;
+        margin-bottom: 15px;
+        padding: 10px 30px;
+    }
+    .course-duration {
+        justify-content: center;
     }
 }
