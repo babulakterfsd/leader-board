@@ -350,7 +350,7 @@ a {
 }
 
 /* XS-Extra Small Device (Portrait Phone) */
-@media (max-width: 575.98px) {
+@media only screen and  (max-width: 575.98px) {
     .container {
         height: auto;
         width: 100%;
@@ -364,33 +364,18 @@ a {
     .navbar-nav {
         display: none;
     }
-    .section-title {
-        margin-left: 30px;
-    }
+    
     .players {
         grid-template-columns: repeat(1, 1fr);
     }
-    .player {
-        margin-left: 100px;
-    }
+    
     .blogs {
         grid-template-columns: repeat(1, 1fr);
-    }
-    .blog {
-        padding: 20px;
     }
     .courses {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 15px 0px;
     }
-    .course {
-        width: 70%;
-        margin-left: 70px;
-        margin-bottom: 15px;
-        padding: 10px 30px;
-    }
-    .course-duration {
-        justify-content: center;
-    }
+    
 }
